@@ -5,5 +5,4 @@ import pymongo
 
 def insert_school(mongo_collection, **kwargs):
     """ function that inserts a new document in a collection """
-    mongo_collection.insert_one(kwargs)
-    return (list(mongo_collection.find({})))
+    return (mongo_collection.insert_one(kwargs).inserted_id)
