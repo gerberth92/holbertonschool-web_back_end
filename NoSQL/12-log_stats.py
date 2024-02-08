@@ -14,7 +14,7 @@ if __name__ == '__main__':
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
     for method in methods:
-        print("method {}: {}".format(method, collection.count_documents(
+        print("\tmethod {}: {}".format(method, collection.count_documents(
             {'method': method}
         )))
     
