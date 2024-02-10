@@ -2,10 +2,10 @@
 """
 funcion que determina los elementos.
 """
-from typing import List, Tuple
+from typing import List, Tuple, Iterable, Sequence
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
     Funcion que determina el tamaño de un iterable.
     """
