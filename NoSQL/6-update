@@ -1,0 +1,2 @@
+// agrega un documento a una colleccion
+db.school.updateMany({name: "Holberton school", {$exists: true}}, {$set: {address: "972 Mission street"}})
