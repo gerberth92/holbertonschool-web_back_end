@@ -1,0 +1,2 @@
+// este comando lista todos los documentos
+db.school.all()
