@@ -24,5 +24,6 @@ def status():
     print("{} status check". format(
         nginx.count_documents({'method': 'GET', 'path': '/status'})))
 
+
     if __name__ == '__main__':
         status()
