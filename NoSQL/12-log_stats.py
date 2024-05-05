@@ -23,3 +23,6 @@ def status():
 
     print("{} status check"
           .format(nginx.count({'method': 'GET', 'path': '/status'})))
+    
+    if __name__ == '__main__':
+        status()
