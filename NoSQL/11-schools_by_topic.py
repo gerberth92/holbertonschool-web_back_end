@@ -9,7 +9,7 @@ def schools_by_topic(mongo_collection, topic):
 
     retorno = []
 
-    docs = mongo_collection.find({'topic': topic})
+    docs = mongo_collection.find({'topics': topic})
 
     for doc in docs:
         retorno.append(doc)
