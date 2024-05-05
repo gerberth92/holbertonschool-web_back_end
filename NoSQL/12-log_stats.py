@@ -13,16 +13,18 @@ def status():
 
     metodos = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
-    print(nginx.count(), "logs")
+    print("{} logs". format(nginx.count_documents({})))
 
     print("Methods:")
 
     for metodo in metodos:
         print("\tmethod {}: {}"
-              .format(metodo, nginx.count({'method': metodo})))
+              .format(metodo,
+                      nginx.count_documents({'method': metodo})))
 
     print("{} status check"
-          .format(nginx.count({'method': 'GET', 'path': '/status'})))
+          .format(nginx.count_documents({'method': 'GET',
+                                         'path': '/status'})))
     
     if __name__ == '__main__':
         status()
